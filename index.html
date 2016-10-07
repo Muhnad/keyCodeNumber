@@ -39,6 +39,11 @@
     font-weight: bold;
     text-align: center;
   }
+  .keycode__word {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+  }  
   .footer {
     width: 100%;
     text-align: center;
@@ -51,7 +56,8 @@
     <div class="wrapper">
       <p>Press any key to get the JavaScript event keycode number.</p>
       <h1 class="keycode__heading">key code is:</h1>
-    	<h3 class="keycode__num" id="keynum">0</h3>
+    	<h2 class="keycode__num" id="keynum">0</h2>
+      <h3 class="keycode__word" id="keyword"></h3>
     </div>
   </div>
   <footer class="footer">
@@ -60,12 +66,6 @@
     </div>
   </footer>
 
-	<script type="text/javascript">
-  window.onkeydown = function (e) {
-    var num = e.which;
-    document.getElementById("keynum").innerHTML = num
-  }
-
-	</script>
+	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
