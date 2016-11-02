@@ -1,5 +1,5 @@
 "use strict";
-var obj = {
+const obj = {
     "8": "backspace",
     "9": "Tab",
     "13": "Enter",
@@ -36,11 +36,13 @@ var obj = {
     "221": "Close bracket ]",
     "222": "Quote ''"
 };
-window.onkeydown = function (e) {
-    var num = e.which,
-        keynum = document.getElementById("keynum"),
-        keyword = document.getElementById("keyword"),
-        char = String.fromCharCode(num).toLowerCase();
+
+
+const getCharCode = function (e) {
+    const num = e.which,
+          keynum = document.getElementById("keynum"),
+          keyword = document.getElementById("keyword"),
+          char = String.fromCharCode(num);
 
     if (obj[num]) {
         keynum.innerHTML = num;
@@ -49,4 +51,6 @@ window.onkeydown = function (e) {
         keynum.innerHTML = num;
         keyword.innerHTML = char;
     }
-};
+}
+
+window.onkeydown = getCharCode
